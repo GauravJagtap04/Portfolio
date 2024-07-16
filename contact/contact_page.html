@@ -1,34 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="widht=device-width, initial-scale=1.0">
-    <meta name="description" content="Contact Page">
+
+	<script type="text/javascript" src="https://livejs.com/live.js"></script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="contact form">
+    <link rel="shortcut icon" type="image/x-icon" href="/Portfolio/icons/idcardicon.png">
+    <link rel="stylesheet" href="cont_p.css">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400&family=Montserrat:wght@300&family=Nunito:wght@300&family=Open+Sans&family=Poppins:wght@300&family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400&family=Montserrat:wght@300;700&family=Nunito:wght@300&family=Open+Sans&family=Poppins:wght@300&family=Roboto:wght@300&display=swap" rel="stylesheet">
     
-    <link rel="shortcut icon" href="icons/idcardicon.png" type="image/x-icon">
-    <link rel="stylesheet" type="text/css" href="cont_p.css">
-    
-    <title>Contact Page</title>
+    <title>Contact Form</title>
 </head>
 <body>
-    <div class="form-popup" id="myForm">
-        <form class="form-container" id="contact-form" action="insert.php" method="POST">
-            <div class="close-form" onclick="closeForm()"><img src="icons/x.png" alt="Close"></div>
-            <h1>Contact me</h1>
-            <div class="details">
-                <label for="name"><b>Name</b></label>
-                <input type="text" placeholder="Enter Name" name="Name" required><br>
-                <label for="email"><b>Email</b></label>
-                <input type="text" placeholder="Enter Email" name="email" required><br>
-            </div>
-            <div class="message-field">
-                <textarea class="textarea" name="message-field" placeholder="Enter Message"></textarea>
-            </div>
-        <button type="submit" class="btn">Send Message</button>
+    <div id="container">
+    	<a href="/Portfolio/card/card.html" onclick="return confirm('Are you sure?')"><img src="/Portfolio/icons/x.png"></a>
+    	<form id="form-container" action="insert.php" method="POST">
+    		<h1>Contact Me</h1>
+            <table>
+            	<tr>
+                    <td class="label">Name</td>
+                    <td><input type="text" placeholder="Enter name" name="username" required></td>
+                </tr>
+            	<tr>
+                    <td class="label">Email</td>
+                    <td><input type="email" placeholder="Enter email" name="email" required></td>
+	            </tr>
+	            <tr height="10px"></tr>
+                <tr>
+                    <td class="label" colspan="2"><span>Message</span></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><textarea name="message" rows="6" placeholder="Enter your message"></textarea></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><input type="submit" name="submit" value="Submit"></td>
+                </tr>
+            </table>
         </form>
     </div>
 </body>
