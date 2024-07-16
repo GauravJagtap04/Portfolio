@@ -8,8 +8,8 @@
 #main{
     width: 100%;
     height: 100vh;
-    overflow: hidden;
-    background-image: url(background.jpg);
+    overflow: auto;
+    background-image: url(/Portfolio/background.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     display: flex;
@@ -74,8 +74,8 @@ button{
 
 #desc {
     color: rgb(230, 230, 230);
-    font-size: .8rem;
-    font-weight: 300;
+    font-size: .9rem;
+    font-weight: 500;
     letter-spacing: 2.5px;
     text-align: center;
     font-family: 'Montserrat', sans-serif;
@@ -93,8 +93,8 @@ table{
 }
 
 td:last-of-type{
-    font-size: 14px;
-    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-family: 'Poppins';
     vertical-align: center;
 }
 
@@ -124,7 +124,7 @@ a {
     max-width: -moz-fit-content;
     max-width: fit-content;
     grid-template-columns: repeat(4, 1fr);
-    margin: 30px auto;
+    margin: 20px auto;
 }
 
 [name="invert"] {
@@ -132,19 +132,22 @@ a {
 }
 
 #message {
-    display: block;
-    margin: 15px auto;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-#message > img{
-    width: 35px;
-    height: 35px;
+#message-img {
+    width: 40px;
+    height: 40px;
     opacity: 60%;
     transition: .3s;
+    filter: invert();
     margin: 0;
-    padding: 0; 
+    padding: 0;
 }
 
-#message > img:hover {
+#message-img:hover {
     transform: scale(115%);
 }
